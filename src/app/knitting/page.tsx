@@ -35,7 +35,7 @@ export default function KnittingPage() {
       });
 
       toast.success(
-        `${response.message}\nPO: ${response.po_number}\nAvailable Yarn: ${response.new_available_yarn}\nProcessed Yarn: ${response.new_processed_yarn}`,
+        `${response.message}\nPO: ${response.po_number}\nAvailable Yarn: ${response.new_available_yarn}\nProcessed Fabric: ${response.new_processed_yarn}`,
         {
           duration: 4000,
           style: {

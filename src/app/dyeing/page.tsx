@@ -39,7 +39,7 @@ export default function DyeingPage() {
       });
 
       toast.success(
-        `${response.message}\nPO: ${response.po_number}\nAvailable Yarn: ${response.new_available_yarn}\nProcessed Yarn: ${response.new_processed_yarn}`,
+        `${response.message}\nPO: ${response.po_number}\nAvailable Fabric: ${response.new_available_yarn}\nDyed Fabric: ${response.new_processed_yarn}`,
         {
           duration: 4000,
           style: {
@@ -125,7 +125,7 @@ export default function DyeingPage() {
       {/* Process Yarn Card */}
       <motion.div className="w-full max-w-6xl bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/50 p-10 mb-12 hover:shadow-indigo-200 transition-shadow duration-300">
         <h2 className="text-2xl font-bold text-indigo-700 mb-8 text-center">
-          Process Dyeing Yarn
+          Process Dyeing
         </h2>
         <form
           onSubmit={handleProcessYarn}
@@ -146,13 +146,13 @@ export default function DyeingPage() {
 
           <div className="flex-1">
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Yarn Amount
+              Fabric Received
             </label>
             <input
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              placeholder="Enter yarn amount"
+              placeholder="Enter Fabric Received"
               className="w-full rounded-xl border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
             />
           </div>
@@ -177,7 +177,7 @@ export default function DyeingPage() {
             type="submit"
             className="w-full md:w-auto px-8 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 shadow-md transition"
           >
-            {loading ? "Processing..." : "Process Yarn"}
+            {loading ? "Processing..." : "Process"}
           </motion.button>
         </form>
       </motion.div>

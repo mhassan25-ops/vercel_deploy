@@ -41,7 +41,7 @@ export default function TrimmingPage() {
       });
 
       toast.success(
-        `${response.message}\nPO: ${response.po_number}\nAvailable Yarn: ${response.new_available_yarn}\nProcessed Yarn: ${response.new_processed_yarn}`,
+        `${response.message}\nPO: ${response.po_number}\nAvailable Fabric: ${response.new_available_yarn}\nPieces Ready: ${response.new_processed_yarn}`,
         {
           duration: 4000,
           style: {
@@ -128,7 +128,7 @@ export default function TrimmingPage() {
       {/* Process Yarn Card */}
       <motion.div className="w-full max-w-6xl bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/50 p-10 mb-12 hover:shadow-indigo-200 transition-shadow duration-300">
         <h2 className="text-2xl font-bold text-indigo-700 mb-8 text-center">
-          Process Trimming Yarn
+          Process Trimming
         </h2>
         <form
           onSubmit={handleProcessYarn}
@@ -149,7 +149,7 @@ export default function TrimmingPage() {
 
           <div className="flex-1">
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Yarn Amount
+              Fabric Amount
             </label>
             <input
               type="number"
@@ -163,7 +163,7 @@ export default function TrimmingPage() {
           {/* 🆕 Deliver Field */}
           <div className="flex-1">
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Delivery Amount
+              Ready Pieces
             </label>
             <input
               type="number"
